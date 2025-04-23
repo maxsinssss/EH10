@@ -1,0 +1,47 @@
+1 A)
+install Nmap> target:www.google.com>command: nMap -sA www.google.com
+
+1B)
+command:nMap -sS www.google.com,nMap -sF www.google.com,nMap -sN www.google.com,nMap -sX www.google.com
+
+2 A)
+install Nmap> target:www.google.com>command: nMap -sA www.google.com
+
+2 B)
+google:cain and abel download github>download zip>open file>cain run>calc symbol click>write:computer>calculate>MD5 copy>cracker>paste>click>paste>right click>add wordlist>start
+
+open cryptool>new>add>symmetric model> vishant>encrypt>RC4>128bit
+
+3 B) open wireshrk>website:testphp vulnweb>open signup>add credentilal>wireshart>add:http>post method expand
+
+4 B) cmd>ipconfig,ping www.google.com,netstat,tracert www.google.com
+
+5 A)cmd>ipconfig>copy id > nmap ip
+cmd>arp -a or by vishant kal
+tracert www.google.comp
+
+6 A) who is
+website:who.is>www.github.com> last> giagonistics
+
+7 A)tamper data
+download>tamper data>firfox:www.amazon.com>one product add to cart>extension run from firefox>add product
+
+8 A)key logger
+run pyhton file> op/write:hello>new file created
+
+9)cross site
+GitHub.com>DVWA download>add this folder in xampp htdocs>open config file of DVWA
+
+DB_USER:'root'
+DB_PASSWORD:''
+
+DISABLE_AUTHENTICATION:true
+
+DVWA-master>congig> name with .php
+
+chrome:localhost/DVWA-master
+
+crate database
+goto xss
+
+
